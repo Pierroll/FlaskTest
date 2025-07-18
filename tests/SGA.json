@@ -1,222 +1,206 @@
-[
-  {
-    "question": "¿Qué es un Sistema de Gestión Ambiental (SGA) según el documento?",
-    "options": [
-      "Un conjunto de reglas y planes para medir y mejorar el impacto ambiental",
-      "Un sistema para aumentar la producción sin considerar el medio ambiente",
-      "Un método para reducir costos operativos en una empresa",
-      "Un programa para capacitar empleados en seguridad laboral",
-      "Un conjunto de reglas y planes para medir y mejorar el impacto ambiental"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "¿Cuál es el principio clave del SGA mencionado en el documento?",
-    "options": [
-      "Reducir costos para maximizar ganancias",
-      "Lo que no se mide, no se mejora",
-      "Cumplir solo con las leyes ambientales",
-      "Aumentar la producción sin restricciones",
-      "Lo que no se mide, no se mejora"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Qué rol juega el Ministerio del Ambiente (MINAM) en el SNGA?",
-    "options": [
-      "Lidera la producción industrial del país",
-      "Coordina la gestión ambiental nacional",
-      "Regula los precios de productos ecológicos",
-      "Supervisa la calidad de los productos exportados",
-      "Coordina la gestión ambiental nacional"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Qué característica distingue al SNGA del Perú desde 2004?",
-    "options": [
-      "Centralizado, sectorial, exclusivo",
-      "Descentralizado, transectorial, participativo",
-      "Privado, competitivo, restrictivo",
-      "Internacional, regulado, limitado",
-      "Descentralizado, transectorial, participativo"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Cuál es el primer paso para implementar un SGA?",
-    "options": [
-      "Capacitar a los empleados",
-      "Compromiso de la alta dirección",
-      "Revisar normas ambientales",
-      "Crear un plan de acción",
-      "Compromiso de la alta dirección"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Qué incluye el diagnóstico inicial de un SGA?",
-    "options": [
-      "Evaluar la situación actual e impactos ambientales",
-      "Analizar los costos de producción de la empresa",
-      "Revisar los contratos con proveedores externos",
-      "Establecer metas de ventas para el año",
-      "Evaluar la situación actual e impactos ambientales"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "¿Qué debe asegurar el paso de cumplimiento en un SGA?",
-    "options": [
-      "Cumplir todas las normas ambientales aplicables",
-      "Reducir los costos operativos de la empresa",
-      "Aumentar la producción sin restricciones",
-      "Capacitar a los empleados en marketing",
-      "Cumplir todas las normas ambientales aplicables"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "¿Qué se establece en la definición de objetivos y metas de un SGA?",
-    "options": [
-      "Metas financieras para aumentar ganancias",
-      "Objetivos ambientales medibles y un plan de acción",
-      "Estrategias para mejorar la imagen de marca",
-      "Planes para expandir la producción industrial",
-      "Objetivos ambientales medibles y un plan de acción"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Qué se crea en el diseño del sistema de un SGA?",
-    "options": [
-      "Campañas de marketing para productos ecológicos",
-      "Procedimientos, manuales y roles ambientales",
-      "Planes de expansión de infraestructura",
-      "Estrategias para reducir costos laborales",
-      "Procedimientos, manuales y roles ambientales"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Qué busca la capacitación en un SGA?",
-    "options": [
-      "Mejorar las habilidades de ventas del personal",
-      "Fomentar una cultura de responsabilidad ambiental",
-      "Aumentar la eficiencia en la producción",
-      "Reducir los costos de capacitación interna",
-      "Fomentar una cultura de responsabilidad ambiental"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Cuál es un beneficio financiero del SNGA?",
-    "options": [
-      "Aumentar los costos de producción",
-      "Concienciar a legisladores e inversionistas",
-      "Reducir la calidad de los productos",
-      "Limitar la participación ciudadana",
-      "Concienciar a legisladores e inversionistas"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Cuál es un eje de la Política Nacional del Ambiente?",
-    "options": [
-      "Expansión de la producción industrial",
-      "Conservación de recursos naturales",
-      "Aumento de exportaciones nacionales",
-      "Reducción de normativas ambientales",
-      "Conservación de recursos naturales"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Qué norma ISO aborda los requisitos de un SGA?",
-    "options": [
-      "ISO 14004",
-      "ISO 14001",
-      "ISO 14031",
-      "ISO 14040",
-      "ISO 14001"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Qué diferencia a ISO 14001:2015 de la versión 2004?",
-    "options": [
-      "Es menos técnica y más estratégica",
-      "Se centra más en documentación",
-      "No considera el contexto organizacional",
-      "Ignora la integración con otros sistemas",
-      "Es menos técnica y más estratégica"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "¿Qué es el enfoque PHVA en ISO 14001?",
-    "options": [
-      "Planificar, Hacer, Verificar, Actuar",
-      "Producir, Habilitar, Validar, Adaptar",
-      "Planear, Hacer, Valorar, Ajustar",
-      "Preparar, Ejecutar, Vigilar, Ampliar",
-      "Planificar, Hacer, Verificar, Actuar"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "¿Por qué es clave el contexto organizacional en ISO 14001?",
-    "options": [
-      "Analiza el entorno interno y externo",
-      "Reduce los costos de implementación",
-      "Ignora las normativas ambientales",
-      "Limita la participación de empleados",
-      "Analiza el entorno interno y externo"
-    ],
-    "correct_answer": 0
-  },
-  {
-    "question": "¿Qué debe hacer una empresa con ISO 14001:2004 para actualizarse?",
-    "options": [
-      "Mantener los procedimientos antiguos",
-      "Incorporar el contexto organizacional",
-      "Reducir la capacitación del personal",
-      "Ignorar los cambios estratégicos",
-      "Incorporar el contexto organizacional"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Qué ayuda al Perú a enfrentar retos ambientales según el documento?",
-    "options": [
-      "Aumentar la producción industrial",
-      "El Sistema Nacional de Gestión Ambiental",
-      "Reducir las normativas ambientales",
-      "Limitar la participación ciudadana",
-      "El Sistema Nacional de Gestión Ambiental"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Qué logró ECOQUIM S.A. al implementar ISO 14001?",
-    "options": [
-      "Aumentó la contaminación de aguas",
-      "Gestionó residuos y cumplió normativas",
-      "Redujo la producción de productos",
-      "Ignoró las denuncias ambientales",
-      "Gestionó residuos y cumplió normativas"
-    ],
-    "correct_answer": 1
-  },
-  {
-    "question": "¿Cuándo se espera la próxima actualización de ISO 14001?",
-    "options": [
-      "Marzo de 2026",
-      "Enero de 2025",
-      "Julio de 2024",
-      "Diciembre de 2027",
-      "Marzo de 2026"
-    ],
-    "correct_answer": 0
-  }
-]
+{
+  "title": "Test sobre Sistema de Gestión Ambiental y SNGA",
+  "description": "Evaluación basada en el documento SISTEMA DE GESTIÓN AMBIENTAL.pdf para verificar el conocimiento sobre SGA, SNGA, ISO 14001 y políticas ambientales en el Perú.",
+  "questions": [
+    {
+      "question": "¿Qué es un Sistema de Gestión Ambiental (SGA) según el documento?",
+      "options": [
+        "Un conjunto de reglas para medir y mejorar el impacto ambiental",
+        "Un método para capacitar en seguridad",
+        "Un programa para reducir costos",
+        "Un sistema para aumentar la producción"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Cuál es el principio clave del SGA mencionado en el documento?",
+      "options": [
+        "Cumplir solo con las leyes ambientales",
+        "Aumentar la producción sin restricciones",
+        "Lo que no se mide, no se mejora",
+        "Reducir costos para maximizar ganancias"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Qué rol juega el Ministerio del Ambiente (MINAM) en el SNGA?",
+      "options": [
+        "Regula los precios de productos ecológicos",
+        "Coordina la gestión ambiental nacional",
+        "Supervisa la calidad de productos exportados",
+        "Lidera la producción industrial del país"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Qué caracteriza al SNGA del Perú desde 2004?",
+      "options": [
+        "Centralizado, sectorial, exclusivo",
+        "Privado, competitivo, restrictivo",
+        "Internacional, regulado, limitado",
+        "Descentralizado, transectorial, participativo"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Cuál es el primer paso para implementar un SGA?",
+      "options": [
+        "Capacitar a los empleados",
+        "Revisar normas ambientales",
+        "Compromiso de la alta dirección",
+        "Crear un plan de acción"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Qué incluye el diagnóstico inicial de un SGA?",
+      "options": [
+        "Evaluar la situación actual e impactos ambientales",
+        "Revisar contratos con proveedores",
+        "Analizar los costos de producción",
+        "Establecer metas de ventas anuales"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué asegura el paso de cumplimiento en un SGA?",
+      "options": [
+        "Aumentar la producción sin restricciones",
+        "Reducir los costos operativos",
+        "Capacitar en marketing",
+        "Cumplir todas las normas ambientales aplicables"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Qué se establece en la definición de objetivos de un SGA?",
+      "options": [
+        "Estrategias para mejorar la imagen de marca",
+        "Objetivos ambientales medibles y un plan",
+        "Metas financieras para aumentar ganancias",
+        "Planes para expandir la producción"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Qué se crea en el diseño del sistema de un SGA?",
+      "options": [
+        "Campañas de marketing para productos",
+        "Estrategias para reducir costos laborales",
+        "Procedimientos, manuales y roles ambientales",
+        "Planes de expansión de infraestructura"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Qué busca la capacitación en un SGA?",
+      "options": [
+        "Fomentar responsabilidad ambiental",
+        "Aumentar la eficiencia en la producción",
+        "Mejorar las habilidades de ventas",
+        "Reducir costos de capacitación"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Cuál es un beneficio financiero del SNGA?",
+      "options": [
+        "Reducir la calidad de los productos",
+        "Aumentar los costos de producción",
+        "Concienciar a legisladores e inversionistas",
+        "Limitar la participación ciudadana"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Cuál es un eje de la Política Nacional del Ambiente?",
+      "options": [
+        "Expansión de la producción industrial",
+        "Aumento de exportaciones nacionales",
+        "Reducción de normativas ambientales",
+        "Conservación de recursos naturales"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Qué norma ISO aborda los requisitos de un SGA?",
+      "options": [
+        "ISO 14001",
+        "ISO 14004",
+        "ISO 14031",
+        "ISO 14040"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué diferencia a ISO 14001:2015 de la versión 2004?",
+      "options": [
+        "Se centra más en documentación",
+        "Ignora la integración con otros sistemas",
+        "No considera el contexto organizacional",
+        "Es menos técnica y más estratégica"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Qué es el enfoque PHVA en ISO 14001?",
+      "options": [
+        "Preparar, Ejecutar, Vigilar, Ampliar",
+        "Producir, Habilitar, Validar, Adaptar",
+        "Planificar, Hacer, Verificar, Actuar",
+        "Planear, Hacer, Valorar, Ajustar"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Por qué es clave el contexto organizacional en ISO 14001?",
+      "options": [
+        "Ignora las normativas ambientales",
+        "Analiza el entorno interno y externo",
+        "Reduce los costos de implementación",
+        "Limita la participación de empleados"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Qué debe hacer una empresa con ISO 14001:2004 para actualizarse?",
+      "options": [
+        "Incorporar el contexto organizacional",
+        "Ignorar los cambios estratégicos",
+        "Mantener los procedimientos antiguos",
+        "Reducir la capacitación del personal"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué ayuda al Perú a enfrentar retos ambientales?",
+      "options": [
+        "El Sistema Nacional de Gestión Ambiental",
+        "Reducir las normativas ambientales",
+        "Aumentar la producción industrial",
+        "Limitar la participación ciudadana"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué logró ECOQUIM S.A. al implementar ISO 14001?",
+      "options": [
+        "Aumentó la contaminación de aguas",
+        "Redujo la producción de productos",
+        "Ignoró las denuncias ambientales",
+        "Gestionó residuos y cumplió normativas"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Cuándo se espera la próxima actualización de ISO 14001?",
+      "options": [
+        "Julio de 2024",
+        "Diciembre de 2027",
+        "Enero de 2025",
+        "Marzo de 2026"
+      ],
+      "correct_answer": 3
+    }
+  ]
+}
