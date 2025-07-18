@@ -1,0 +1,279 @@
+{% extends "base.html" %} {% block title %}Subir Test - Sistema de Tests{%
+endblock %} {% block content %}
+<div class="text-center mb-5">
+  <h1 class="display-4 fw-bold text-primary mb-3">
+    <i class="fas fa-upload me-3"></i>
+    Subir Nuevo Test
+  </h1>
+  <p class="lead text-muted">
+    Sube un archivo JSON con las preguntas de tu test
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-lg-8 mx-auto">
+    <!-- Formulario de subida -->
+    <div class="card border-0 shadow-sm mb-5">
+      <div class="card-body p-4">
+        <form id="uploadForm" enctype="multipart/form-data">
+          <div class="mb-4">
+            <label for="test_file" class="form-label fw-bold"
+              >Seleccionar archivo JSON</label
+            >
+            <input
+              type="file"
+              class="form-control form-control-lg"
+              id="test_file"
+              name="test_file"
+              accept=".json"
+              required
+            />
+            <div class="form-text">
+              <i class="fas fa-info-circle me-1"></i>
+              Solo se permiten archivos .json con el formato correcto
+            </div>
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">
+              <i class="fas fa-cloud-upload-alt me-2"></i>
+              Subir Test
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Formato del JSON -->
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-light">
+        <h5 class="mb-0">
+          <i class="fas fa-code me-2"></i>
+          Formato del archivo JSON
+        </h5>
+      </div>
+      <div class="card-body">
+        <p class="mb-3">Tu archivo JSON debe seguir este formato:</p>
+        <pre class="bg-dark text-light p-3 rounded"><code>{
+  "title": "Título del Test",
+  "description": "Descripción del test (opcional)",
+  "questions": [
+    {
+      "question": "¿Cuál es la capital de Francia?",
+      "options": [
+        "Madrid",
+        "París",
+        "Roma",
+        "Berlín"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Cuánto es 2 + 2?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_answer": 1
+    }
+  ]
+}</code></pre>
+
+        <div class="mt-4">
+          <h6 class="fw-bold mb-3">Explicación del formato:</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i
+                class="fas fa-circle text-primary me-2"
+                style="font-size: 0.5rem"
+              ></i>
+              <strong>title:</strong> El título que aparecerá en el test
+            </li>
+            <li class="mb-2">
+              <i
+                class="fas fa-circle text-primary me-2"
+                style="font-size: 0.5rem"
+              ></i>
+              <strong>description:</strong> Descripción opcional del test
+            </li>
+            <li class="mb-2">
+              <i
+                class="fas fa-circle text-primary me-2"
+                style="font-size: 0.5rem"
+              ></i>
+              <strong>questions:</strong> Array con todas las preguntas
+            </li>
+            <li class="mb-2">
+              <i
+                class="fas fa-circle text-primary me-2"
+                style="font-size: 0.5rem"
+              ></i>
+              <strong>question:</strong> El texto de la pregunta
+            </li>
+            <li class="mb-2">
+              <i
+                class="fas fa-circle text-primary me-2"
+                style="font-size: 0.5rem"
+              ></i>
+              <strong>options:</strong> Array con las 4 opciones de respuesta
+            </li>
+            <li class="mb-2">
+              <i
+                class="fas fa-circle text-primary me-2"
+                style="font-size: 0.5rem"
+              ></i>
+              <strong>correct_answer:</strong> Índice de la respuesta correcta
+              (0, 1, 2 o 3)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ejemplo descargable -->
+    <div class="text-center mt-4">
+      <button class="btn btn-outline-primary" onclick="downloadExample()">
+        <i class="fas fa-download me-2"></i>
+        Descargar ejemplo de JSON
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de resultado -->
+<div class="modal fade" id="resultModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultModalTitle">Resultado</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body" id="resultModalBody"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+        <a
+          href="/"
+          class="btn btn-primary"
+          id="goHomeBtn"
+          style="display: none"
+        >
+          Ir al inicio
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block scripts %}
+<script>
+  document
+    .getElementById("uploadForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData();
+      const fileInput = document.getElementById("test_file");
+      const file = fileInput.files[0];
+
+      if (!file) {
+        showModal("Error", "Por favor selecciona un archivo", "danger");
+        return;
+      }
+
+      if (!file.name.endsWith(".json")) {
+        showModal("Error", "El archivo debe tener extensión .json", "danger");
+        return;
+      }
+
+      formData.append("test_file", file);
+
+      // Mostrar loading
+      const submitBtn = document.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML =
+        '<i class="fas fa-spinner fa-spin me-2"></i>Subiendo...';
+      submitBtn.disabled = true;
+
+      fetch("/upload_test", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            showModal("¡Éxito!", data.message, "success", true);
+            document.getElementById("uploadForm").reset();
+          } else {
+            showModal("Error", data.error, "danger");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          showModal("Error", "Error al subir el archivo", "danger");
+        })
+        .finally(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        });
+    });
+
+  function showModal(title, message, type, showHomeBtn = false) {
+    document.getElementById("resultModalTitle").textContent = title;
+    document.getElementById("resultModalBody").innerHTML = `
+        <div class="alert alert-${type}" role="alert">
+            ${message}
+        </div>
+    `;
+
+    const homeBtn = document.getElementById("goHomeBtn");
+    if (showHomeBtn) {
+      homeBtn.style.display = "inline-block";
+    } else {
+      homeBtn.style.display = "none";
+    }
+
+    const modal = new bootstrap.Modal(document.getElementById("resultModal"));
+    modal.show();
+  }
+
+  function downloadExample() {
+    const exampleData = {
+      title: "Test de Ejemplo",
+      description: "Un test de ejemplo para demostrar el formato",
+      questions: [
+        {
+          question: "¿Cuál es la capital de Francia?",
+          options: ["Madrid", "París", "Roma", "Berlín"],
+          correct_answer: 1,
+        },
+        {
+          question: "¿Cuánto es 2 + 2?",
+          options: ["3", "4", "5", "6"],
+          correct_answer: 1,
+        },
+        {
+          question: "¿Cuál es el océano más grande?",
+          options: ["Atlántico", "Índico", "Pacífico", "Ártico"],
+          correct_answer: 2,
+        },
+      ],
+    };
+
+    const dataStr = JSON.stringify(exampleData, null, 2);
+    const dataBlob = new Blob([dataStr], { type: "application/json" });
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "ejemplo_test.json";
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+</script>
+{% endblock %}

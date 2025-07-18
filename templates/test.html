@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block title %}{{ test.title }} - Sistema de Tests{% endblock %}
+
+{% block content %}
+<style>
+  /* Forzar el z-index correcto para modal y backdrop */
+  .modal {
+    z-index: 1060 !important; /* Mayor que el backdrop y otros elementos */
+  }
+  .modal-backdrop {
+    z-index: 1050 !important; /* Menor que el modal */
+  }
+</style>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold text-primary mb-1">{{ test.title }}</h2>
+        <p class="text-muted mb-0">{{ test.description or 'Completa todas las preguntas.' }}</p>
+    </div>
+    <div class="text-end">
+        <div class="badge bg-primary fs-6 mb-2">
+            <span id="current-question">1</span> / {{ test.questions|length }}
+        </div>
+        <div class="progress" style="height: 6px; width: 200px;">
+            <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+    </div>
+</div>
+
+<div id="test-container">
+{% for question in test.questions %}
+{% set i = loop.index0 %}
+<div class="question-slide" id="question-{{ i }}" {% if i > 0 %}style="display: none;"{% endif %}>
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <h4 class="card-title mb-4">
+                <span class="badge bg-light text-dark me-2">{{ i + 1 }}</span>
+                {{ question.question }}
+            </h4>
+
+            <div class="options-container">
+                {% for option in question.options %}
+                {% set j = loop.index0 %}
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="question-{{ i }}" 
+                           id="q{{ i }}-opt{{ j }}" value="{{ j }}" 
+                           onchange="saveAnswer({{ i }}, {{ j }})">
+                    <label class="form-check-label w-100 p-3 rounded border" for="q{{ i }}-opt{{ j }}">
+                        <strong>{{ ['A', 'B', 'C', 'D'][j] }})</strong> {{ option }}
+                    </label>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-outline-secondary prev-btn" onclick="previousQuestion()" 
+                id="prev-btn-{{ i }}" {% if i == 0 %}style="visibility: hidden;"{% endif %}>
+            <i class="fas fa-arrow-left me-2"></i>Anterior
+        </button>
+
+        {% if i < test.questions|length - 1 %}
+        <button class="btn btn-primary next-btn" onclick="nextQuestion()" id="next-btn-{{ i }}">
+            Siguiente<i class="fas fa-arrow-right ms-2"></i>
+        </button>
+        {% else %}
+        <button class="btn btn-success finish-btn" onclick="finishTest()" id="finish-btn-{{ i }}">
+            <i class="fas fa-flag-checkered me-2"></i>Finalizar Test
+        </button>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- Modal de confirmación (fuera de .main-container) -->
+<div class="modal fade" id="finishModal" tabindex="-1" aria-labelledby="finishModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="finishModalLabel">Finalizar Test</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que quieres finalizar el test?</p>
+                <p class="text-muted small">Se evaluarán todas tus respuestas y podrás ver los resultados.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="confirmFinishBtn">
+                    <i class="fas fa-check me-2"></i>Finalizar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let currentQuestion = 0;
+const totalQuestions = {{ test.questions|length }};
+let userAnswers = {};
+let modalInstance = null;
+
+function updateProgress() {
+    const progress = ((currentQuestion + 1) / totalQuestions) * 100;
+    document.getElementById('progress-bar').style.width = progress + '%';
+    document.getElementById('current-question').textContent = currentQuestion + 1;
+}
+
+function showQuestion(questionIndex) {
+    document.querySelectorAll('.question-slide').forEach(slide => {
+        slide.style.display = 'none';
+    });
+    
+    document.getElementById('question-' + questionIndex).style.display = 'block';
+    
+    document.querySelectorAll('.prev-btn').forEach(btn => {
+        btn.style.visibility = questionIndex === 0 ? 'hidden' : 'visible';
+    });
+    
+    updateProgress();
+}
+
+function nextQuestion() {
+    if (currentQuestion < totalQuestions - 1) {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+    }
+}
+
+function previousQuestion() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+    }
+}
+
+function saveAnswer(questionId, answer) {
+    userAnswers[questionId] = answer;
+    
+    fetch('/submit_answer', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            question_id: questionId,
+            answer: answer
+        })
+    }).catch(error => {
+        console.error('Error saving answer:', error);
+    });
+}
+
+function finishTest() {
+    if (modalInstance) {
+        modalInstance.dispose(); // Destruir instancia previa
+        modalInstance = null;
+    }
+    modalInstance = new bootstrap.Modal(document.getElementById('finishModal'), {
+        backdrop: 'static',
+        keyboard: false
+    });
+    console.log('Opening modal');
+    modalInstance.show();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showQuestion(currentQuestion);
+
+    const modalEl = document.getElementById('finishModal');
+    let shouldFinishTest = false;
+
+    const confirmBtn = document.getElementById('confirmFinishBtn');
+    if (confirmBtn) {
+        confirmBtn.addEventListener('click', () => {
+            console.log('Confirm button clicked');
+            shouldFinishTest = true;
+            try {
+                modalInstance.hide();
+            } catch (error) {
+                console.error('Error hiding modal:', error);
+            }
+        });
+    } else {
+        console.error('Confirm button not found!');
+    }
+
+    modalEl.addEventListener('hidden.bs.modal', () => {
+        console.log('Modal hidden event fired');
+        if (shouldFinishTest) {
+            shouldFinishTest = false;
+
+            // Limpiar backdrop y clases
+            try {
+                document.querySelectorAll('.modal-backdrop').forEach(el => {
+                    console.log('Removing backdrop:', el);
+                    el.remove();
+                });
+                document.body.classList.remove('modal-open');
+                document.body.style.paddingRight = '';
+                document.body.style.overflow = '';
+            } catch (error) {
+                console.error('Error cleaning up backdrop:', error);
+            }
+
+            // Mostrar pantalla de carga
+            try {
+                document.body.innerHTML = `
+                    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                        <div class="text-center">
+                            <div class="spinner-border text-primary mb-3" role="status">
+                                <span class="visually-hidden">Cargando...</span>
+                            </div>
+                            <h4>Procesando resultados...</h4>
+                        </div>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Error setting loading screen:', error);
+            }
+
+            // Enviar resultados al backend
+            fetch('/finish_test', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(response => {
+                console.log('Fetch response:', response);
+                return response.json();
+            })
+            .then(data => {
+                if (data.error) {
+                    console.error('Backend error:', data.error);
+                    alert('Error: ' + data.error);
+                } else {
+                    console.log('Redirecting to results');
+                    window.location.href = '/results';
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                alert('Error al procesar el test');
+            });
+        }
+    });
+});
+</script>
+{% endblock %}

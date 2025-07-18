@@ -1,0 +1,326 @@
+{
+  "title": "Monitorización de redes con SNMP",
+  "description": "Test de conocimientos sobre el Protocolo Simple de Administración de Red (SNMP)",
+  "questions": [
+    {
+      "question": "¿Qué significa el acrónimo SNMP y cuál es su propósito principal en la administración de redes IP?",
+      "options": [
+        "Sistema de Notificación de Mensajes Privados para gestionar comunicaciones seguras",
+        "Protocolo Simple de Administración de Red para administrar nodos en una red IP",
+        "Servicio de Monitoreo de Protocolos de Red para analizar el tráfico de datos",
+        "Sistema de Navegación de Múltiples Protocolos para enrutamiento automático"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿A qué capa del modelo de red pertenece el protocolo SNMP?",
+      "options": [
+        "Capa de transporte",
+        "Capa de red",
+        "Capa de aplicación",
+        "Capa de enlace de datos"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Cuáles son los tres elementos principales que componen el sistema SNMP?",
+      "options": [
+        "Monitor de Red, Controlador de Dispositivos y Sistema de Alertas",
+        "Administrador de SNMP, Agentes SNMP y Base de Información de Administración (MIB)",
+        "Servidor SNMP, Cliente SNMP y Base de Datos de Red",
+        "Procesador Central, Módulos de Red y Sistema de Configuración"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Qué software ejecuta el Administrador de SNMP como parte de un Sistema de Administración de Red (NMS)?",
+      "options": [
+        "Software de monitoreo de tráfico para análisis de rendimiento de red",
+        "Software de configuración automática para dispositivos de infraestructura",
+        "Software de seguridad avanzada para protección de datos de red",
+        "Software de administración SNMP como parte de un sistema de administración de red"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Dónde residen físicamente el Agente SNMP y la MIB en los dispositivos de red?",
+      "options": [
+        "En los clientes de dispositivo de red",
+        "En el servidor central de administración de red",
+        "En la base de datos principal del sistema",
+        "En el módulo de seguridad del router"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Cuál es la responsabilidad principal del Agente SNMP en relación con la MIB?",
+      "options": [
+        "Configurar automáticamente los parámetros de red del dispositivo",
+        "Mantener la seguridad de las comunicaciones entre dispositivos de red",
+        "Proporcionar acceso a la MIB local que refleja los recursos del dispositivo",
+        "Generar reportes estadísticos sobre el rendimiento del dispositivo"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "Menciona las dos solicitudes principales que un Administrador de SNMP puede utilizar para interactuar con un Agente SNMP.",
+      "options": [
+        "Las solicitudes \"send\" y \"receive\"",
+        "Las solicitudes \"read\" y \"write\"",
+        "Las solicitudes \"push\" y \"pull\"",
+        "Las solicitudes \"get\" y \"set\""
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "Describe la función de una solicitud \"get\" realizada por el NMS y cómo responde el agente SNMP.",
+      "options": [
+        "El NMS usa \"get\" para solicitar datos y el agente responde con el valor solicitado",
+        "El NMS usa \"get\" para modificar configuraciones y el agente confirma los cambios",
+        "El NMS usa \"get\" para enviar alertas y el agente procesa las notificaciones",
+        "El NMS usa \"get\" para establecer conexiones y el agente autoriza el acceso"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "Describe la función de una solicitud \"set\" realizada por el NMS y menciona un ejemplo de acción que puede iniciar.",
+      "options": [
+        "El NMS usa \"set\" para consultar el estado del dispositivo y puede generar reportes",
+        "El NMS usa \"set\" para establecer conexiones seguras y puede activar el cifrado",
+        "El NMS usa \"set\" para cambiar variables de configuración y puede hacer que un router se reinicie",
+        "El NMS usa \"set\" para monitorear el tráfico y puede detectar anomalías"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Cómo el NMS recopila información de los agentes SNMP de manera periódica y con qué propósito principal?",
+      "options": [
+        "Mediante notificaciones automáticas para detectar fallos de seguridad",
+        "Utilizando alertas programadas para verificar la conectividad de red",
+        "Por medio de actualizaciones continuas para mantener la sincronización",
+        "A través del sondeo periódico usando solicitudes get para controlar cargas de tráfico"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "Menciona las dos desventajas principales del sondeo periódico de SNMP.",
+      "options": [
+        "Retraso entre evento y detección, y equilibrio entre frecuencia y uso de ancho de banda",
+        "Alto consumo de CPU y problemas de compatibilidad entre versiones",
+        "Limitaciones de seguridad y complejidad en la configuración inicial",
+        "Dependencia de la conectividad y dificultades en el mantenimiento"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué son las \"traps\" de SNMP y cómo ayudan a mitigar las desventajas del sondeo?",
+      "options": [
+        "Son filtros de seguridad que bloquean accesos no autorizados al sistema",
+        "Son protocolos de respaldo que mantienen la continuidad del servicio",
+        "Son mensajes no solicitados que alertan sobre condiciones inmediatamente",
+        "Son herramientas de diagnóstico que identifican problemas de configuración"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "Enumera al menos tres ejemplos de condiciones o eventos que pueden ser notificados al administrador de SNMP mediante traps.",
+      "options": [
+        "Actualizaciones de firmware, cambios de contraseña y modificaciones de políticas",
+        "Instalación de software, creación de usuarios y cambios en la topología",
+        "Mantenimiento programado, copias de seguridad y actualizaciones de configuración",
+        "Autenticación incorrecta, reinicios y estado del enlace (activo o inactivo)"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Cómo las notificaciones de trap contribuyen a reducir los recursos de red y de agente?",
+      "options": [
+        "Al eliminar la necesidad de algunas de las solicitudes de sondeo de SNMP",
+        "Al comprimir automáticamente los datos transmitidos entre dispositivos",
+        "Al reducir el número de dispositivos que requieren monitoreo constante",
+        "Al optimizar las rutas de comunicación entre el NMS y los agentes"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Cuáles son las tres versiones de SNMP mencionadas en los materiales?",
+      "options": [
+        "SNMP Basic, SNMP Pro y SNMP Enterprise",
+        "SNMP Lite, SNMP Standard y SNMP Advanced",
+        "SNMPv1, SNMPv2c y SNMPv3",
+        "SNMP Classic, SNMP Modern y SNMP Secure"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿En qué RFC se define SNMPv1?",
+      "options": [
+        "RFC 1157",
+        "RFC 1901",
+        "RFC 2273",
+        "RFC 3410"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿En qué RFCs se define SNMPv2c y qué marco administrativo utiliza?",
+      "options": [
+        "RFC 2273 a 2275 y utiliza el marco administrativo basado en certificados digitales",
+        "RFC 1901 a 1908 y utiliza el marco administrativo basado en cadenas de comunidad",
+        "RFC 3410 a 3415 y utiliza el marco administrativo basado en autenticación biométrica",
+        "RFC 1157 a 1165 y utiliza el marco administrativo basado en tokens de seguridad"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿En qué RFCs se define originalmente SNMPv3 y cuál es la serie de RFCs más actualizada para SNMPv3?",
+      "options": [
+        "Originalmente en RFC 1901 a 1908, actualizada en RFC 2273 a 2275",
+        "Originalmente en RFC 1157 a 1165, actualizada en RFC 1901 a 1908",
+        "Originalmente en RFC 3410 a 3415, actualizada en RFC 4001 a 4005",
+        "Originalmente en RFC 2273 a 2275, actualizada en RFC 3410 a 3415"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Qué elementos comunes utilizan todas las versiones de SNMP (SNMPv1, SNMPv2c, SNMPv3)?",
+      "options": [
+        "Administradores de SNMP, Agentes SNMP y MIBs",
+        "Servidores de base de datos, protocolos de cifrado y sistemas de autenticación",
+        "Módulos de seguridad, interfaces gráficas y sistemas de respaldo",
+        "Controladores de red, monitores de tráfico y generadores de reportes"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué mejoras específicas incluye SNMPv2c en comparación con SNMPv1?",
+      "options": [
+        "Cifrado avanzado de datos y autenticación de usuarios mejorada",
+        "Interfaz gráfica renovada y soporte para dispositivos móviles",
+        "Protocolo de comunicación más rápido y compresión de datos automática",
+        "Mecanismo de recuperación masiva e informes de mensajes de error más detallados"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Cuáles son las limitaciones de seguridad de SNMPv1 y SNMPv2c?",
+      "options": [
+        "Tienen problemas de compatibilidad con firewalls modernos y proxies",
+        "No pueden autenticar el origen de un mensaje ni proporcionar cifrado",
+        "Requieren configuración manual compleja y mantenimiento constante",
+        "Presentan vulnerabilidades en la transmisión de datos por redes inalámbricas"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Qué características de seguridad clave proporciona SNMPv3?",
+      "options": [
+        "Control de acceso basado en roles y auditoría automática de eventos",
+        "Protección contra malware y detección de intrusiones en tiempo real",
+        "Acceso seguro mediante autenticación y cifrado de paquetes a través de la red",
+        "Respaldo automático de configuraciones y recuperación ante desastres"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Qué es un \"modelo de seguridad\" en el contexto de SNMPv3?",
+      "options": [
+        "Un protocolo de cifrado utilizado para proteger las comunicaciones de red",
+        "Un sistema de respaldo que garantiza la continuidad del servicio de red",
+        "Una herramienta de monitoreo que detecta amenazas de seguridad",
+        "Una estrategia de autenticación configurada para un usuario y su grupo"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Qué es un \"nivel de seguridad\" en el contexto de SNMPv3?",
+      "options": [
+        "El nivel de seguridad permitido dentro de un modelo de seguridad",
+        "La clasificación de amenazas detectadas por el sistema de monitoreo",
+        "El grado de complejidad requerido para las contraseñas de usuario",
+        "La cantidad de intentos de acceso permitidos antes del bloqueo"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué determina la combinación del nivel y el modelo de seguridad en SNMPv3?",
+      "options": [
+        "La velocidad de procesamiento de los paquetes SNMP en la red",
+        "El número máximo de usuarios que pueden acceder simultáneamente",
+        "Qué mecanismo de seguridad se utiliza al manejar un paquete SNMP",
+        "La frecuencia con la que se actualizan las políticas de seguridad"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Qué tipos de nodos de red pueden ser administrados utilizando SNMP?",
+      "options": [
+        "Únicamente routers y switches de nivel empresarial",
+        "Solamente dispositivos que soporten protocolos de red avanzados",
+        "Exclusivamente equipos de marca específica con certificación SNMP",
+        "Servidores, estaciones de trabajo, routers, switches y dispositivos de seguridad"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Qué tipo de datos almacenan las MIB sobre el funcionamiento de un dispositivo?",
+      "options": [
+        "Información de configuración inicial y parámetros de fábrica del dispositivo",
+        "Datos sobre el funcionamiento del dispositivo disponibles para usuarios remotos autenticados",
+        "Registros de auditoría y logs de seguridad del sistema operativo",
+        "Datos de rendimiento histórico y estadísticas de uso del dispositivo"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Cómo puede el software de NMS mostrar y procesar la información recopilada a través del sondeo SNMP?",
+      "options": [
+        "Mediante reportes automáticos enviados por correo electrónico a los administradores",
+        "Utilizando alertas de voz y notificaciones push a dispositivos móviles",
+        "A través de la GUI de NMS calculando promedios, representando datos gráficamente o estableciendo umbrales",
+        "Por medio de integración directa con sistemas de ticketing y bases de datos"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "Proporciona un ejemplo del uso de una solicitud \"get\" de SNMP mencionado en los materiales.",
+      "options": [
+        "Determinar la velocidad de transmisión de la interfaz Ethernet",
+        "Verificar la configuración de VLAN en el switch principal",
+        "Consultar el estado de la memoria RAM del dispositivo",
+        "Usar una solicitud get para determinar si la interfaz G0/0 está up/up"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "Proporciona un ejemplo de cómo un NMS puede alertar al administrador utilizando una \"trap\" de SNMP, según los materiales.",
+      "options": [
+        "Usar una trap para alertar que la interfaz G0/0 falló, mostrando el router en rojo",
+        "Enviando un reporte semanal con estadísticas de rendimiento de la red",
+        "Generando automáticamente un ticket de soporte técnico en el sistema",
+        "Programando mantenimiento preventivo basado en el uso del dispositivo"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "Proporciona un ejemplo del uso de una solicitud \"get\" de SNMP mencionado en los materiales.",
+      "options": [
+        "Determinar la velocidad de transmisión de la interfaz Ethernet",
+        "Usar una solicitud get para determinar si la interfaz G0/0 está up/up",
+        "Verificar la configuración de VLAN en el switch principal",
+        "Consultar el estado de la memoria RAM del dispositivo"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "Proporciona un ejemplo de cómo un NMS puede alertar al administrador utilizando una \"trap\" de SNMP, según los materiales.",
+      "options": [
+        "Enviando un reporte semanal con estadísticas de rendimiento de la red",
+        "Usar una trap para alertar que la interfaz G0/0 falló, mostrando el router en rojo",
+        "Generando automáticamente un ticket de soporte técnico en el sistema",
+        "Programando mantenimiento preventivo basado en el uso del dispositivo"
+      ],
+      "correct_answer": 1
+    }
+  ]
+}

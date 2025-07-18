@@ -1,0 +1,106 @@
+{
+  "title": "Matemáticas Básicas",
+  "description": "Test de conocimientos básicos de matemáticas y aritmética",
+  "questions": [
+    {
+      "question": "¿Cuánto es 15 + 27?",
+      "options": [
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Cuál es el resultado de 8 × 7?",
+      "options": [
+        "54",
+        "56",
+        "58",
+        "60"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Cuánto es 144 ÷ 12?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Cuál es el valor de √64?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Cuánto es 25% de 200?",
+      "options": [
+        "25",
+        "50",
+        "75",
+        "100"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Cuál es el perímetro de un cuadrado con lado de 5 cm?",
+      "options": [
+        "15 cm",
+        "20 cm",
+        "25 cm",
+        "30 cm"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Cuánto es 2³ (2 al cubo)?",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "12"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Cuál es el área de un rectángulo de 4m × 6m?",
+      "options": [
+        "20 m²",
+        "22 m²",
+        "24 m²",
+        "26 m²"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Cuántos minutos hay en 2.5 horas?",
+      "options": [
+        "120 minutos",
+        "130 minutos",
+        "140 minutos",
+        "150 minutos"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Cuál es el resultado de (10 + 5) × 2?",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "correct_answer": 1
+    }
+  ]
+}

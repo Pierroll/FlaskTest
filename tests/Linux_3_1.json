@@ -1,0 +1,206 @@
+{
+  "title": "Cuestionario de Automatización y Cron",
+  "description": "Evalúa tus conocimientos sobre automatización de tareas en Linux y la gestión de cron.",
+  "questions": [
+    {
+      "question": "¿Cuál es el objetivo principal de la automatización de tareas de administración en Linux?",
+      "options": [
+        "Desactivar todas las tareas programadas para evitar sobrecarga",
+        "Incrementar los tiempos de despliegue manual para controlar cada detalle",
+        "Eliminar la necesidad de documentación en los servidores",
+        "Agilizar y optimizar la gestión de sistemas, reduciendo errores y liberando tiempo para tareas estratégicas"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "Menciona tres beneficios clave de automatizar tareas de administración en Linux.",
+      "options": [
+        "Ahorro de tiempo, reducción de errores y mayor eficiencia",
+        "Despliegues más lentos y propensos a errores",
+        "Dependencia total de intervención humana",
+        "Mayor consumo de energía, complejidad y costes"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Cómo contribuye la automatización a la seguridad de los sistemas?",
+      "options": [
+        "Oculta las vulnerabilidades en los informes del sistema",
+        "Desactiva los parches de seguridad para mejorar el rendimiento",
+        "Ignora las actualizaciones para evitar reinicios inesperados",
+        "Permite implementar configuraciones seguras y mantener los sistemas actualizados con parches críticos"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "Además de los scripts de Bash, ¿qué dos tipos de herramientas de automatización se mencionan en los materiales?",
+      "options": [
+        "Herramientas de configuración y orquestadores de contenedores",
+        "Compiladores y depuradores",
+        "Planillas de cálculo y procesadores de texto",
+        "Editores de texto y navegadores web"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué son los Orquestadores de contenedores y menciona dos ejemplos?",
+      "options": [
+        "Permiten automatizar el despliegue y la gestión de aplicaciones en contenedores. Ejemplos: Docker y Kubernetes",
+        "Son editores de imágenes avanzados. Ejemplos: GIMP y Inkscape",
+        "Programas para compilar código fuente. Ejemplos: GCC y Clang",
+        "Sistemas para escribir scripts. Ejemplos: Vim y Nano"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué son las Herramientas de gestión IaC (Infraestructura como Código) y qué permiten definir?",
+      "options": [
+        "Herramientas para crear bases de datos relacionales",
+        "Permiten definir la infraestructura como código. Ejemplos: Terraform y CloudFormation",
+        "Aplicaciones de diseño gráfico. Ejemplos: Photoshop y Illustrator",
+        "Sistemas de monitoreo web. Ejemplos: UptimeRobot y Pingdom"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "Menciona dos tareas específicas que se pueden automatizar en un sistema Linux.",
+      "options": [
+        "Gestión de usuarios y aprovisionamiento de servidores",
+        "Creación de documentos y edición de video",
+        "Diseño gráfico y envío de correos manuales",
+        "Descarga de juegos y redes sociales"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Por qué es importante documentar la automatización?",
+      "options": [
+        "Para evitar que otros usuarios comprendan el sistema",
+        "Para dificultar la resolución de errores",
+        "Para facilitar la gestión y la resolución de problemas de los scripts y configuraciones automatizadas",
+        "Para ocultar la lógica detrás de los scripts"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿A qué se refiere la Gestión de cron o tareas cron?",
+      "options": [
+        "A la edición de archivos multimedia",
+        "A la administración de tareas programadas para ejecutarse automáticamente en un servidor",
+        "A la creación de documentos HTML",
+        "A la configuración de contraseñas de usuario"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Para qué son útiles las tareas cron?",
+      "options": [
+        "Para automatizar procesos repetitivos como copias de seguridad o actualizaciones del sistema",
+        "Para jugar videojuegos automáticamente",
+        "Para conectarse a redes sociales cada hora",
+        "Para navegar por internet sin intervención del usuario"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "Nombra dos ejemplos de tareas que se pueden programar con cron.",
+      "options": [
+        "Ejecutar scripts de programación y realizar copias de seguridad",
+        "Editar imágenes y ver películas",
+        "Revisar redes sociales y enviar memes",
+        "Descargar torrents y escuchar música"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué comando se utiliza para editar y gestionar la tabla cron?",
+      "options": [
+        "nano",
+        "cronedit",
+        "crontab",
+        "vi"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Qué son los Archivos crontab?",
+      "options": [
+        "Archivos que contienen configuraciones gráficas del sistema",
+        "Archivos que contienen juegos programados",
+        "Archivos de configuración de red",
+        "Archivos de texto que contienen la programación de tareas cron"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "¿Qué ofrecen algunas plataformas de alojamiento web para gestionar cron?",
+      "options": [
+        "Interfaces web para gestionar las tareas cron",
+        "Reproductores de video integrados",
+        "Sistemas de videojuegos online",
+        "Entornos de edición de imágenes"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "Según el Taller 3, ¿qué aprenderá el alumno?",
+      "options": [
+        "Diseñar un sitio web con JavaScript",
+        "Programar un script que se ejecute cada minuto",
+        "Configurar una red de computadoras",
+        "Crear una base de datos relacional"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "¿Cuál es el paso 1 del Taller 3?",
+      "options": [
+        "Configurar una conexión VPN",
+        "Actualizar el sistema operativo",
+        "Crear el script mensaje.sh",
+        "Editar el archivo hosts"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Qué se hace en el paso 3 del Taller 3?",
+      "options": [
+        "Programar la ejecución automática del script mensaje.sh",
+        "Editar una imagen",
+        "Instalar una aplicación desde la tienda",
+        "Enviar un correo electrónico"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué se recomienda hacer en el paso 4 del Taller 3?",
+      "options": [
+        "Verificar el log generado",
+        "Apagar el sistema",
+        "Crear un archivo nuevo",
+        "Subir archivos al servidor FTP"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "¿Qué son los jobs en el shell?",
+      "options": [
+        "Aplicaciones gráficas",
+        "Documentos PDF generados por el sistema",
+        "Procesos que se ejecutan en primer o segundo plano",
+        "Comandos de red locales"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "¿Qué muestra el comando jobs y qué información incluye?",
+      "options": [
+        "Muestra la lista de trabajos en segundo plano con su número, estado y comando asociado",
+        "Muestra el contenido del directorio /jobs",
+        "Despliega las configuraciones de red del sistema",
+        "Mide la temperatura de la CPU en tiempo real"
+      ],
+      "correct_answer": 0
+    }
+  ]
+}
